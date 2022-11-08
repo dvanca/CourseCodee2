@@ -6,7 +6,7 @@ public class Main {
         int sum = addNumbers(number);
         System.out.println("sum is = " + sum);
 
-        int sum1 = addEvenNumbers(20);
+        int sum1 = addEvenNumbers(9);
         System.out.println("sum of even is = " + sum1);
 
         String string = "kayak";
@@ -30,7 +30,7 @@ public class Main {
         if(num!=0 && num %2 ==0){
             return num + addEvenNumbers(num-2);
         }else{
-            return num;
+            return 0;
         }
     }
 
