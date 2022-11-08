@@ -15,6 +15,7 @@ public class Main {
         System.out.println(reverseString("masina"));
 
         System.out.println(sumOfDigits(123));
+        System.out.println(fibbonacyArray(6));
     }
 
     public static int addNumbers(int num){
@@ -57,6 +58,17 @@ public class Main {
             return n;
         }else{
             return n%10 + sumOfDigits(n/10);
+        }
+    }
+
+    public static int fibbonacyArray(int n){
+        if(n==0){
+            return 0;
+        }
+        if(n==1){
+            return 1;
+        }else{
+            return fibbonacyArray(n-1)+fibbonacyArray(n-2);
         }
     }
 }
