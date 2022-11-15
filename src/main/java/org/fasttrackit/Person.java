@@ -1,3 +1,5 @@
+package org.fasttrackit;
+
 import java.util.Objects;
 
 public class Person {
@@ -6,13 +8,14 @@ public class Person {
     private final int age;
     private final String city;
 
-
     public Person(String firstName, String lastName, int age, String city) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.city = city;
     }
+
+
 
     public String getFirstName() {
         return firstName;
@@ -45,11 +48,12 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "org.fasttrackit.Person{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", city='" + city + '\'' +
                 '}';
     }
+
 }
