@@ -51,16 +51,15 @@ public class PersonService {
                 .toList();
     }
 
-    public List<String> ageBetweenEighteenAndSixty(){
+    public List<Person> ageBetweenEighteenAndSixty(){
         return list.stream()
-                .filter(Person -> Person.getAge() >18 && Person.getAge() < 60)
-                .map(Person -> Person.getFirstName())
+                .filter(person -> person.getAge() >18 && person.getAge() < 60)
                 .toList();
     }
 
     public List<String> personsThatStartWithA(){
         return list.stream()
-                .map(Person -> Person.getFirstName())
+                .map(Person::getFirstName)
                 .filter(firstName -> firstName.charAt(0) == 'A')
                 .toList();
     }
