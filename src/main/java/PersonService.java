@@ -85,9 +85,10 @@ public class PersonService {
                 .toList();
     }
 
-    public List<Person> sortPersonsByFirstLastAndAge(){
+    public List<String> sortPersonsByFirstLastAndAge(){
         return  list.stream()
-                .sorted(Comparator.comparing(Person::getFirstName).thenComparing(Person::getLastName).thenComparing(Person::getAge))
+                .map(Person -> Person.getFirstName() + " " + Person.getLastName()+" " + Person.getAge())
+                .sorted()
                 .toList();
 
     }
