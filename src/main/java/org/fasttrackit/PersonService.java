@@ -67,14 +67,14 @@ public class PersonService {
 
     public Set<String> allPersonsUniquely(){
         return  list.stream()
-                .map(Person -> Person.getFirstName())
+                .map(Person::getFirstName)
                 .collect(Collectors.toSet());
 
     }
 
     public List<String> sortPersonsByFirstName(){
         return list.stream()
-                .map(Person -> Person.getFirstName())
+                .map(Person::getFirstName)
                 .sorted()
                 .toList();
     }
